@@ -1,0 +1,10 @@
+body		{ background-color:#FFFFFF; font-family:verdana, arial; font-size:10pt; color:#000000; }
+table		{ background-color:#FFFFFF; font-family:verdana, arial; font-size:10pt; color:#000000; }
+a:link		{ text-decoration:none; color:#00A000; }
+a.under:link	{ text-decoration:none; color:#000000; }
+a:visited	{ text-decoration:none; color:#00A000; }
+a.under:visited	{ text-decoration:none; color:#000000; }
+a:active	{ text-decoration:none; color:#00A000; }
+a.under:active	{ text-decoration:none; color:#000000; }
+a:hover		{ text-decoration:none; color:#00FF00; }
+a.under:hover   { text-decoration:none; color:#00FF00; }

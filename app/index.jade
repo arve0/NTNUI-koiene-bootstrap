@@ -1,0 +1,575 @@
+extends layout
+block body
+  .container
+    .row
+      // Logo venstre topp
+      .logo
+        a(href='http://org.ntnu.no/koiene/index.php')
+          img(src='./NTNUI Koiene_files/koiene_logo.gif')
+          b NTNUI Koiene
+      // Toppbilde
+      .top-img
+        img.img-responsive(src='./NTNUI Koiene_files/bildermiks.jpg')
+    .row
+      // Navigasjonslinje topp
+      .navigation
+        | ../
+        a(href='http://org.ntnu.no/koiene/index.php') hovedside
+        | /Koiene/Holmsåkoia
+    .row
+      // Meny venstre
+      .meny
+        a.over(href='http://org.ntnu.no/koiene/omkoiene.php') Om koiegruppa
+        a.under(href='http://org.ntnu.no/koiene/turprogram.php') Turprogram
+        a.under(href='http://org.ntnu.no/koiene/veddugnad.php') Veddugnad
+        a.under(href='http://org.ntnu.no/koiene/epostliste.php') Epostliste
+        a.under(href='http://org.ntnu.no/koiene/oldschool.php') Old School
+        a.under(href='http://org.ntnu.no/koiene/kontakt.php') Kontakt oss!
+        a.over(href='http://org.ntnu.no/koiene/koiene/index.php') Koiene
+        a.under(href='http://org.ntnu.no/koiene/oversiktskart.php') Oversiktskart
+        a.under(href='http://org.ntnu.no/koiene/koiematrisa.php') Koiematrisa
+        a.under(href='http://org.ntnu.no/koiene/koietilkoie.php') Koie til Koie
+        a.under(href='http://org.ntnu.no/koiene/tips.php') Tips & Tricks
+        a.under(href='http://org.ntnu.no/koiene/jaktfiske.php') Jakt & Fiske
+        a.over(href='http://org.ntnu.no/koiene/koiebruk.php') Hvordan leie?
+        a.under(href='http://org.ntnu.no/koiene/ledigekoier.php') Ledige koier
+        a.under(href='http://org.ntnu.no/koieneres/alle/onsdagsko.php') Popularitet
+        a.under(href='http://org.ntnu.no/koieneres/alle/statistikk.php') Statistikk
+        a.under(href='http://org.ntnu.no/koiene/ekoieboka/index.php') Digital koiebok
+        a.under(href='http://org.ntnu.no/koiene/termsofuse.php') Terms of use
+        a.over(href='http://org.ntnu.no/koiene/faq.php') FAQ
+        a.over(href='https://picasaweb.google.com/112172516519597975801', target='_blank') Turbilder
+        .spraklink
+          a(href='http://org.ntnu.no/koiene/engelsk.php')
+            img(src='./NTNUI Koiene_files/engelsk.gif', width='27', height='18', border='0', alt='engelsk')
+          a(href='http://org.ntnu.no/koiene/fransk.php')
+            img(src='./NTNUI Koiene_files/fransk.gif', width='27', height='18', border='0', alt='fransk')
+          a(href='http://org.ntnu.no/koiene/tysk.php')
+            img(src='./NTNUI Koiene_files/tysk.gif', width='27', height='18', border='0', alt='tysk')
+        .face
+          table(cellpadding='0', cellspacing='0', border='0')
+            tbody
+              tr
+                td(bgcolor='#E6E6E6', width='42', align='right', valign='middle')
+                  a(href='http://www.facebook.com/pages/NTNUI-Koiene/349959341712320', target='_blank')
+                    img(src='./NTNUI Koiene_files/facebook.gif', border='0', alt='')
+                td(bgcolor='#E6E6E6', valign='top')
+                  a(href='http://www.facebook.com/pages/NTNUI-Koiene/349959341712320', target='_blank')
+                    font(size='-2')  Følg oss på
+                    br
+                    | Facebook
+        hr
+        p(align='center')
+          a(href='http://www.ntnui.no/', target='_blank')
+            img(src='./NTNUI Koiene_files/ntnui_2_5x1.gif', border='0', alt='http://www.ntnui.no')
+        p(align='center')
+          a(href='http://www.studenterhytta.org/', target='_blank')
+            img(src='./NTNUI Koiene_files/hyttalogo.jpg', border='0', alt='http://www.studenterhytta.org')
+      // Innhold
+      .innhold
+        h2 Holmsåkoia
+        .kort-info
+          .vanskelighetsgrad-bilde
+            img(src='./NTNUI Koiene_files/koiene_logo.gif')
+            img(src='./NTNUI Koiene_files/koiene_logo.gif')
+            img(src='./NTNUI Koiene_files/koiene_logo_negate.gif')
+            img(src='./NTNUI Koiene_files/koiene_logo_negate.gif')
+            img(src='./NTNUI Koiene_files/koiene_logo_negate.gif')
+          .vanskelighetsgrad
+            font(size='-2')
+              b Vanskelighetsgrad
+              | (
+              a(href='http://org.ntnu.no/koiene/koiene/koiene.php?k=holmsaakoia&l=0&v=1#A') les mer
+              | )
+              br
+              b › 
+              i et stykke fra buss/bil, enkel å finne
+          .engelsk
+            a(href='http://org.ntnu.no/koiene/koiene/koiene.php?k=holmsaakoia&l=1')
+              img(src='./NTNUI Koiene_files/engelsk.gif', width='27', height='18', border='0', alt='')
+        .koie-info
+          .koie-bilde-stor
+            a(href='http://org.ntnu.no/koiene/koiene/bilder/holmsaakoia1.jpg')
+              img(src='./NTNUI Koiene_files/holmsaakoia1_li.jpg', border='0', alt='')
+          .koie-bilder-liten
+            a(href='http://org.ntnu.no/koiene/koiene/bilder/holmsaakoia2.jpg')
+              img(src='./NTNUI Koiene_files/holmsaakoia2_li.jpg', border='0', alt='')
+            a(href='http://org.ntnu.no/koiene/koiene/bilder/holmsaakoia3.jpg')
+              img(src='./NTNUI Koiene_files/holmsaakoia3_li.jpg', border='0', alt='')
+            a(href='http://org.ntnu.no/koiene/koiene/bilder/holmsaakoia4.jpg')
+              img(src='./NTNUI Koiene_files/holmsaakoia4_li.jpg', border='0', alt='')
+          .koie-detaljer
+            ul
+              li: b Sylane og Tydal
+              li
+                img(src='./NTNUI Koiene_files/sengeplasser.gif', alt='', border='1')
+                |  Sengeplasser: 20 -
+                b: a(href='http://org.ntnu.no/koiene/ledigekoier.php') ledig?
+              li
+                img(src='./NTNUI Koiene_files/terreng.gif', alt='', border='1')
+                |  Terreng: skog
+              li
+                img(src='./NTNUI Koiene_files/fjell.gif', alt='', border='1')
+                | Høyde: 496m
+              li
+                img(src='./NTNUI Koiene_files/gps.gif', alt='', border='1')
+                | 32V, 0633739, 6997975
+              li
+                img(src='./NTNUI Koiene_files/kart.gif', alt='', border='1')
+                | Kartblad:
+              li
+                b: a(href='http://org.ntnu.no/koiene/tips.php?p=3#1') Meråker-Tydal 108
+              li
+                img(src='./NTNUI Koiene_files/yr.gif', alt='', border='1')
+                | Værvarsel på:
+                a(href='http://www.yr.no/sted/Norge/S%C3%B8r-Tr%C3%B8ndelag/Tydal/Holms%C3%A5koia/', target='_blank')
+                  b yr.no
+        div(align='right', style='width: 100%;')
+          font(size='1')
+            | Kilde:
+            a(href='http://www.yr.no/sted/Norge/S%C3%B8r-Tr%C3%B8ndelag/Tydal/Holms%C3%A5koia/', target='_blank') yr.no
+        div(align='center', style='width: 100%; border: 1px #000000 solid;')
+          table(cellpadding='0', cellspacing='2', border='0')
+            tbody
+              tr
+                td
+                  table(cellpadding='0', cellspacing='0', border='0')
+                    tbody
+                      tr
+                        td(colspan='5', align='center')
+                          font(size='-2')
+                            b Tirsdag 19. nov 
+                      tr
+                        td(width='25')  
+                        td(width='25', align='center', valign='middle')
+                          img(src='./NTNUI Koiene_files/04.png', width='25', height='25', border='0', alt='')
+                        td(width='25', align='center', valign='middle')
+                          font(size='-2', color='#3366FF')
+                            b -4°
+                        td(width='25', align='center', valign='middle')
+                          img(src='./NTNUI Koiene_files/vindpil.0000.160.png', width='25', height='25', border='0', alt='Flau vind, 1 m/s')
+                        td(width='25')  
+                td
+                  table(cellpadding='0', cellspacing='0', border='0')
+                    tbody
+                      tr
+                        td(colspan='5', align='center')
+                          font(size='-2')
+                            b Onsdag 20. nov 
+                      tr
+                        td(width='25')  
+                        td(width='25', align='center', valign='middle')
+                          img(src='./NTNUI Koiene_files/04.png', width='25', height='25', border='0', alt='')
+                        td(width='25', align='center', valign='middle')
+                          font(size='-2', color='#3366FF')
+                            b -5°
+                        td(width='25', align='center', valign='middle')
+                          img(src='./NTNUI Koiene_files/vindpil.0075.155.png', width='25', height='25', border='0', alt='Laber bris, 7 m/s')
+                        td(width='25')  
+                td
+                  table(cellpadding='0', cellspacing='0', border='0')
+                    tbody
+                      tr
+                        td(colspan='5', align='center')
+                          font(size='-2')
+                            b Torsdag 21. nov 
+                      tr
+                        td(width='25')  
+                        td(width='25', align='center', valign='middle')
+                          img(src='./NTNUI Koiene_files/04.png', width='25', height='25', border='0', alt='')
+                        td(width='25', align='center', valign='middle')
+                          font(size='-2', color='#3366FF')
+                            b -3°
+                        td(width='25', align='center', valign='middle')
+                          img(src='./NTNUI Koiene_files/vindpil.0000.160.png', width='25', height='25', border='0', alt='Flau vind, 2 m/s')
+                        td(width='25')  
+                td
+                  table(cellpadding='0', cellspacing='0', border='0')
+                    tbody
+                      tr
+                        td(colspan='5', align='center')
+                          font(size='-2')
+                            b Fredag 22. nov 
+                      tr
+                        td(width='25')  
+                        td(width='25', align='center', valign='middle')
+                          img(src='./NTNUI Koiene_files/03d.png', width='25', height='25', border='0', alt='')
+                        td(width='25', align='center', valign='middle')
+                          font(size='-2', color='#3366FF')
+                            b -4°
+                        td(width='25', align='center', valign='middle')
+                          img(src='./NTNUI Koiene_files/vindpil.0050.170.png', width='25', height='25', border='0', alt='Lett bris, 4 m/s')
+                        td(width='25')  
+                br
+                h3 Koiebeskrivelse
+                table(cellpadding='0', cellspacing='0', border='0')
+                  tbody
+                    tr
+                      td(width='740', align='right')
+                        font(size='1')
+                          | Kilde:
+                          a(href='http://www.statkart.no/', target='_blank') Statens kartverk
+                    tr
+                      td(width='740')
+                        #map_canvas(style='width: 425px; height: 350px; float: right; margin: 0px 0px 8px 15px; border: 1px solid rgb(0, 0, 0); position: relative; background-color: rgb(229, 227, 223); overflow: hidden; -webkit-transform: translateZ(0);')
+                          .gm-style(style='position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;')
+                            div(style='position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;')
+                              div(style='position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default; -webkit-transform-origin: 0px 0px; -webkit-transform: matrix(1, 0, 0, 1, 0, 0);')
+                                div(style='-webkit-transform: translateZ(0); position: absolute; left: 0px; top: 0px; width: 100%; z-index: 200;')
+                                  div(style='-webkit-transform: translateZ(0); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;')
+                                    div(style='position: absolute; left: 0px; top: 0px; z-index: 20;')
+                                      div(style='position: absolute; left: 0px; top: 0px; z-index: 1;')
+                                        div(style='-webkit-transform: translateZ(0); position: absolute; left: 175px; top: -40px;')
+                                          img(src='./NTNUI Koiene_files/mapslt', draggable='false', style='width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                                        div(style='-webkit-transform: translateZ(0); position: absolute; left: -81px; top: -40px;')
+                                          img(src='./NTNUI Koiene_files/mapslt(1)', draggable='false', style='width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                                        div(style='-webkit-transform: translateZ(0); position: absolute; left: 175px; top: -296px;')
+                                          img(src='./NTNUI Koiene_files/mapslt(2)', draggable='false', style='width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                                        div(style='-webkit-transform: translateZ(0); position: absolute; left: 175px; top: 216px;')
+                                          img(src='./NTNUI Koiene_files/mapslt(3)', draggable='false', style='width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                                        div(style='-webkit-transform: translateZ(0); position: absolute; left: 431px; top: -40px;')
+                                          img(src='./NTNUI Koiene_files/mapslt(4)', draggable='false', style='width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                                        div(style='-webkit-transform: translateZ(0); position: absolute; left: -81px; top: -296px;')
+                                          img(src='./NTNUI Koiene_files/mapslt(5)', draggable='false', style='width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                                        div(style='-webkit-transform: translateZ(0); position: absolute; left: -81px; top: 216px;')
+                                          img(src='./NTNUI Koiene_files/mapslt(6)', draggable='false', style='width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                                        div(style='-webkit-transform: translateZ(0); position: absolute; left: 431px; top: -296px;')
+                                          img(src='./NTNUI Koiene_files/mapslt(7)', draggable='false', style='width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                                        div(style='-webkit-transform: translateZ(0); position: absolute; left: 431px; top: 216px;')
+                                          img(src='./NTNUI Koiene_files/mapslt(8)', draggable='false', style='width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                                div(style='-webkit-transform: translateZ(0); position: absolute; left: 0px; top: 0px; width: 100%; z-index: 201;')
+                                  div(style='-webkit-transform: translateZ(0); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;')
+                                  div(style='-webkit-transform: translateZ(0); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;')
+                                div(style='-webkit-transform: translateZ(0); position: absolute; left: 0px; top: 0px; width: 100%; z-index: 202;')
+                                  div(style='-webkit-transform: translateZ(0); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;')
+                                  div(style='-webkit-transform: translateZ(0); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;')
+                                  div(style='-webkit-transform: translateZ(0); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;')
+                                div(style='-webkit-transform: translateZ(0); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;')
+                                  div(style='position: absolute; left: 0px; top: 0px; z-index: 0;')
+                                    div(style='position: absolute; left: 0px; top: 0px; z-index: 1;')
+                                      div(style='width: 256px; height: 256px; -webkit-transform: translateZ(0); position: absolute; left: 175px; top: -40px;')
+                                      div(style='width: 256px; height: 256px; -webkit-transform: translateZ(0); position: absolute; left: -81px; top: -40px;')
+                                      div(style='width: 256px; height: 256px; -webkit-transform: translateZ(0); position: absolute; left: 175px; top: -296px;')
+                                      div(style='width: 256px; height: 256px; -webkit-transform: translateZ(0); position: absolute; left: 175px; top: 216px;')
+                                      div(style='width: 256px; height: 256px; -webkit-transform: translateZ(0); position: absolute; left: 431px; top: -40px;')
+                                      div(style='width: 256px; height: 256px; -webkit-transform: translateZ(0); position: absolute; left: -81px; top: -296px;')
+                                      div(style='width: 256px; height: 256px; -webkit-transform: translateZ(0); position: absolute; left: -81px; top: 216px;')
+                                      div(style='width: 256px; height: 256px; -webkit-transform: translateZ(0); position: absolute; left: 431px; top: -296px;')
+                                      div(style='width: 256px; height: 256px; -webkit-transform: translateZ(0); position: absolute; left: 431px; top: 216px;')
+                                div(style='position: absolute; z-index: 0; left: 0px; top: 0px;')
+                                  div(style='overflow: hidden;')
+                                div(style='position: absolute; left: 0px; top: 0px; z-index: 0;')
+                                  div(style='position: absolute; left: 0px; top: 0px; z-index: 1;')
+                                    div(style='width: 256px; height: 256px; background-image: url(http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom=14&x=8722&y=4462); -webkit-transform: translateZ(0); position: absolute; left: 175px; top: -40px;')
+                                    div(style='width: 256px; height: 256px; background-image: url(http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom=14&x=8721&y=4462); -webkit-transform: translateZ(0); position: absolute; left: -81px; top: -40px;')
+                                    div(style='width: 256px; height: 256px; background-image: url(http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom=14&x=8722&y=4461); -webkit-transform: translateZ(0); position: absolute; left: 175px; top: -296px;')
+                                    div(style='width: 256px; height: 256px; background-image: url(http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom=14&x=8722&y=4463); -webkit-transform: translateZ(0); position: absolute; left: 175px; top: 216px;')
+                                    div(style='width: 256px; height: 256px; background-image: url(http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom=14&x=8723&y=4462); -webkit-transform: translateZ(0); position: absolute; left: 431px; top: -40px;')
+                                    div(style='width: 256px; height: 256px; background-image: url(http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom=14&x=8721&y=4461); -webkit-transform: translateZ(0); position: absolute; left: -81px; top: -296px;')
+                                    div(style='width: 256px; height: 256px; background-image: url(http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom=14&x=8721&y=4463); -webkit-transform: translateZ(0); position: absolute; left: -81px; top: 216px;')
+                                    div(style='width: 256px; height: 256px; background-image: url(http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom=14&x=8723&y=4461); -webkit-transform: translateZ(0); position: absolute; left: 431px; top: -296px;')
+                                    div(style='width: 256px; height: 256px; background-image: url(http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom=14&x=8723&y=4463); -webkit-transform: translateZ(0); position: absolute; left: 431px; top: 216px;')
+                            div(style='margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;')
+                              a(target='_blank', href='http://maps.google.com/maps?ll=63.08642,11.6487&z=14&hl=no&mapclient=apiv3', title='Klikk for å se dette området på Google Maps', style='position: static; overflow: visible; float: none; display: inline;')
+                                div(style='width: 62px; height: 26px; cursor: pointer;')
+                                  img(src='./NTNUI Koiene_files/google_white2.png', draggable='false', style='position: absolute; left: 0px; top: 0px; width: 62px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                            .gmnoprint(style='z-index: 1000001; position: absolute; right: 150px; bottom: 0px; width: 12px;')
+                              .gm-style-cc(draggable='false', style='-webkit-user-select: none;')
+                                div(style='opacity: 0.7; width: 100%; height: 100%; position: absolute;')
+                                  div(style='width: 1px;')
+                                  div(style='background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;')
+                                div(style='position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;')
+                                  a(style='color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;') Kartdata
+                                  span(style='display: none;')
+                            div(style='background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 63px; top: 85px;')
+                              div(style='padding: 0px 0px 10px; font-size: 16px;') Kartdata
+                              div(style='font-size: 13px;')
+                              div(style='width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;')
+                                img(src='./NTNUI Koiene_files/mapcnt3.png', draggable='false', style='position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                            .gmnoscreen(style='position: absolute; right: 0px; bottom: 0px;')
+                              div(style='font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);')
+                            .gmnoprint.gm-style-cc(draggable='false', style='z-index: 1000001; position: absolute; -webkit-user-select: none; right: 0px; bottom: 0px;')
+                              div(style='opacity: 0.7; width: 100%; height: 100%; position: absolute;')
+                                div(style='width: 1px;')
+                                div(style='background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;')
+                              div(style='position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;')
+                                a(href='http://www.google.com/intl/no_US/help/terms_maps.html', target='_blank', style='text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);') Bruksvilkår
+                            .gm-style-cc(draggable='false', style='-webkit-user-select: none; position: absolute; right: 0px; bottom: 0px;')
+                              div(style='opacity: 0.7; width: 100%; height: 100%; position: absolute;')
+                                div(style='width: 1px;')
+                                div(style='background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;')
+                              div(style='position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; display: none;')
+                                a(target='_new', title='Rapportér til Google om feil i veikartet eller bildene', href='http://maps.google.com/maps?ll=63.08642,11.6487&z=14&hl=no&mapclient=apiv3&skstate=action:mps_dialog$apiref:1&output=classic', style='font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;') Rapportér en feil med kartet
+                            .gmnoprint(draggable='false', controlwidth='20', controlheight='44', style='margin: 5px; -webkit-user-select: none; position: absolute; left: 0px; top: 0px;')
+                              .gmnoprint(controlwidth='0', controlheight='0', style='opacity: 0.6; display: none; position: absolute;')
+                                div(title='Roter kartet 90 grader', style='width: 22px; height: 22px; overflow: hidden; position: absolute; cursor: pointer;')
+                                  img(src='./NTNUI Koiene_files/mapcnt3.png', draggable='false', style='position: absolute; left: -38px; top: -360px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                              .gmnoprint(controlwidth='20', controlheight='39', style='position: absolute; left: 0px; top: 5px;')
+                                div(style='width: 20px; height: 39px; overflow: hidden; position: absolute;')
+                                  img(src='./NTNUI Koiene_files/mapcnt3.png', draggable='false', style='position: absolute; left: -39px; top: -401px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;')
+                                div(title='Zoom inn', style='position: absolute; left: 0px; top: 2px; width: 20px; height: 17px; cursor: pointer;')
+                                div(title='Zoom ut', style='position: absolute; left: 0px; top: 19px; width: 20px; height: 17px; cursor: pointer;')
+                            .gm-style-cc(draggable='false', style='-webkit-user-select: none; position: absolute; right: 61px; bottom: 0px;')
+                              div(style='opacity: 0.7; width: 100%; height: 100%; position: absolute;')
+                                div(style='width: 1px;')
+                                div(style='background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;')
+                              div(style='position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;')
+                                span 200 m 
+                                div(style='position: relative; display: inline-block; height: 8px; bottom: -1px; width: 46px;')
+                                  div(style='width: 100%; height: 4px; position: absolute; background-color: rgb(255, 255, 255); bottom: 0px; left: 0px;')
+                                  div(style='position: absolute; left: 0px; top: 0px; width: 4px; height: 8px; background-color: rgb(255, 255, 255);')
+                                  div(style='width: 4px; height: 8px; position: absolute; background-color: rgb(255, 255, 255); bottom: 0px; right: 0px;')
+                                  div(style='position: absolute; background-color: rgb(102, 102, 102); height: 2px; bottom: 1px; right: 1px; left: 1px;')
+                                  div(style='position: absolute; left: 1px; top: 1px; width: 2px; height: 6px; background-color: rgb(102, 102, 102);')
+                                  div(style='width: 2px; height: 6px; position: absolute; background-color: rgb(102, 102, 102); bottom: 1px; right: 1px;')
+                        p(align='justify')
+                          | Holmsåkoia kom inn på nettet høsten 1974 etter en kort og hektisk dugnad. Koia står igjen etter tømmerhoggere som herja i områdene rundt. Tidligere var det også en stall til koia, men denne brant ned i april 2002 etter at det ble forsøkt å steke kalkun i badstuen. Forøvrig inneholdt stallen utedo og vedskjul. Vedskjul og utedo ble bygget opp igjen sommeren 2002. Etter iherdig dugnadsinnsats sto ei ny badstue klar til julegildet 2004. Den fikk navnet "Nansen og Johansen". I elva rett nedenfor badstua er det laget en badekulp, så forholdene er perfekte for ei skikkelig badstuøkt. I 2007 ble loftet bygget ut med ekstra sengeplasser og koia er således blitt en av Koienes største med 20 sengeplasser, og også koienes eneste med piano! Et fantastisk ustemt sådan.
+                          br
+                          br
+                          | Koia ligger i den vestlige delen av Sylane og turterrenget er storslagent så snart en kommer seg ut av skogen. Fongen på 1441 moh er godt innenfor rekkevidde for de som higer etter topper, og så vel Ruten som Tronshatten kan være andre dagsturmål. En drøy kilometer unna koia ligger Gammelvollsjøen hvor det er mulig å prøve fiskelykka. Holmsåkoia kan dessuten tjene som utgangspunkt for lengre turer i området. En kan gå til Hognabu, Stabburet eller legge turen inn i Sylane hvor Turistforeningen har flere hytter.
+                        br
+                        h3 Veibeskrivelse
+                        p(align='justify')
+                          | For å komme seg til Holmsåkoia er det lettest å ta buss eller kjøre til landbruksmuseet som ligger på Brekka, ca 2 kilometer øst for Tydal Kirke. Tar en buss til Tydal, vet bussjåføren hvor museet er. Deretter kan en følge veien langs Lødølja.
+                          br
+                          br
+                          | Fra museet er det drøyt 6 kilometer å gå til koia og det er vei man kan følge helt til dørstokken. Pga. veibom en liten kilometer fra museet (som vi ikke har nøkkel til) må man likevel parkere ved museet. Veien er ikke brøytet vinterstid, så husk ski eller truger når det er snø. Koia ligger på et nes ut i elva Holmsåa. Det går en kraftlinje 20 meter fra vedskjulet.
+                          br
+                        br
+                        h3 Utdrag av koiematrisa
+                        div(style='border: 2px #00A000 solid;')
+                          div(style='margin: 2px;')
+                            table(cellpadding='0', cellspacing='2', border='0')
+                              tbody
+                                tr(bgcolor='#E6E6E6')
+                                  th(width='80', height='35') FACTS
+                                  td(rowspan='2', bgcolor='#BBBBBB', width='2')  
+                                  th(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2')
+                                      | Senge
+                                      br
+                                      | plasser
+                                  th(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2')
+                                      | Bord
+                                      br
+                                      | plasser
+                                  th(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') År
+                                  th(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') Terreng
+                                  th(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') Sykkel
+                                  th(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2')
+                                      | Topp
+                                      br
+                                      | tur
+                                  th(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2')
+                                      | Jakt/
+                                      br
+                                      | Fiske
+                                  th(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') Gitar
+                                  th(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2')
+                                      | Vaffel
+                                      br
+                                      | jern
+                                  th(width='165', height='25', align='center', valign='middle')
+                                    font(size='-2') Spesialiteter
+                                tr
+                                  td(width='80', height='25', align='left', valign='middle')
+                                    font(size='-2')
+                                      b
+                                        a(href='./NTNUI Koiene_files/NTNUI Koiene.html') Holmsåkoia
+                                  td(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') 20
+                                  td(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') 25
+                                  td(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') 1974
+                                  td(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') S
+                                  td(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') x
+                                  td(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') x
+                                  td(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') -
+                                  td(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') x
+                                  td(width='55', height='25', align='center', valign='middle')
+                                    font(size='-2') -
+                                  td(width='165', height='25', align='left', valign='middle')
+                                    font(size='-2') badstue, piano
+                            br
+                            br
+                            table(cellpadding='0', cellspacing='2', border='0')
+                              tbody
+                                tr(bgcolor='#E6E6E6')
+                                  th(rowspan='3', width='80')
+                                    | REISE-
+                                    br
+                                    | TID
+                                  td(rowspan='4', bgcolor='#BBBBBB', width='2')  
+                                  th(colspan='5', height='22')
+                                    font(size='-2') Privatbil
+                                  td(rowspan='4', bgcolor='#BBBBBB', width='2')  
+                                  th(colspan='6')
+                                    font(size='-2') Offentlig transport
+                                tr(bgcolor='#E6E6E6')
+                                  th(rowspan='2', width='60')
+                                    font(size='-2')
+                                      | Kjøre
+                                      br
+                                      | tid
+                                  th(colspan='2', height='15')
+                                    font(size='-2') Sommer
+                                  th(colspan='2')
+                                    font(size='-2') Vinter
+                                  th(rowspan='2', width='60')
+                                    font(size='-2')
+                                      | Trans
+                                      br
+                                      | port
+                                  th(rowspan='2', width='60')
+                                    font(size='-2')
+                                      | Kjøre
+                                      br
+                                      | tid
+                                  th(colspan='2')
+                                    font(size='-2') Sommer
+                                  th(colspan='2')
+                                    font(size='-2') Vinter
+                                tr(bgcolor='#E6E6E6')
+                                  th(width='60', height='29')
+                                    font(size='-2')
+                                      | Gang
+                                      br
+                                      | tid
+                                  th(width='60', height='29')
+                                    font(size='-2')
+                                      | Total
+                                      br
+                                      | reise
+                                  th(width='60', height='29')
+                                    font(size='-2')
+                                      | Gang
+                                      br
+                                      | tid
+                                  th(width='60', height='29')
+                                    font(size='-2')
+                                      | Total
+                                      br
+                                      | reise
+                                  th(width='60', height='29')
+                                    font(size='-2')
+                                      | Gang
+                                      br
+                                      | tid
+                                  th(width='60', height='29')
+                                    font(size='-2')
+                                      | Total
+                                      br
+                                      | reise
+                                  th(width='60', height='29')
+                                    font(size='-2')
+                                      | Gang
+                                      br
+                                      | tid
+                                  th(width='60', height='29')
+                                    font(size='-2')
+                                      | Total
+                                      br
+                                      | reise
+                                tr
+                                  td(width='80', height='25', align='left', valign='middle')
+                                    font(size='-2')
+                                      b
+                                        a(href='./NTNUI Koiene_files/NTNUI Koiene.html') Holmsåkoia
+                                  td(align='center', valign='middle')
+                                    font(size='-2') 2:30
+                                  td(align='center', valign='middle')
+                                    font(size='-2') 2:00
+                                  td(align='center', valign='middle')
+                                    font(size='-2') 4:30
+                                  td(align='center', valign='middle')
+                                    font(size='-2') 2:00
+                                  td(align='center', valign='middle')
+                                    font(size='-2') 4:30
+                                  td(align='center', valign='middle')
+                                    font(size='-2') buss
+                                  td(align='center', valign='middle')
+                                    font(size='-2') 2:30
+                                  td(align='center', valign='middle')
+                                    font(size='-2') 2:00
+                                  td(align='center', valign='middle')
+                                    font(size='-2') 4:30
+                                  td(align='center', valign='middle')
+                                    font(size='-2') 2:00
+                                  td(align='center', valign='middle')
+                                    font(size='-2') 4:30
+                            br
+                            br
+                            table(cellpadding='0', cellspacing='2', border='0')
+                              tbody
+                                tr(bgcolor='#E6E6E6')
+                                  th(width='80', height='35')
+                                    | TRANS-
+                                    br
+                                    | PORT
+                                  td(rowspan='2', bgcolor='#BBBBBB', width='2')  
+                                  th(width='43')
+                                    font(size='-2') Alt.
+                                  th(width='205')
+                                    font(size='-2') Transport
+                                  th(width='205')
+                                    font(size='-2') Rute over
+                                  th(width='205')
+                                    font(size='-2') Avstigning
+                                tr
+                                  td(width='80', height='25', align='left', valign='middle')
+                                    font(size='-2')
+                                      b
+                                        a(href='./NTNUI Koiene_files/NTNUI Koiene.html') Holmsåkoia
+                                  td(align='center')
+                                    font(size='-2')
+                                      | 1
+                                      br
+                                      br
+                                      br
+                                  td(align='left', valign='middle')
+                                    font(size='-2')
+                                      | Regionbuss 310
+                                      br
+                                      | Regionbuss 330
+                                      br
+                                      | (Regionbuss 535)
+                                  td(align='left', valign='middle')
+                                    font(size='-2')
+                                      | Trondheim - Stjørdal
+                                      br
+                                      | Stjørdal - Selbu - Tydal
+                                      br
+                                      | (Selbu - Stugudal)
+                                  td(align='left', valign='middle')
+                                    font(size='-2')
+                                      | Stjørdal
+                                      br
+                                      | Brekka (museet)
+                                      br
+                                      br
+                        br
+                        | Sjekk
+                        b
+                          a(href='http://org.ntnu.no/koiene/koiematrisa.php') Koiematrisa
+                        | for mer informasjon og sammenligning med andre koier.
+                        br
+                        br
+                        br
+                        h3 Parkering
+                        p(align='justify') Sommer og vinter: Parkering ved museet.
+                        a(name='A')
+                          br

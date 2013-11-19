@@ -1,0 +1,23 @@
+{
+  "name": "NTNUI-koiene-bootstrap",
+  "main": "index.html",
+  "version": "0.0.0",
+  "authors": [
+    "Daniel Zwick <daniel.zwick@ntnu.no>",
+    "Arve Seljebu <arve.seljebu@gmail.com>"
+  ],
+  "description": "Twitter bootstrap-utgave av hjemmesidene til NTNUI Koiene",
+  "license": "MIT",
+  "homepage": "arve0.github.io/koiene/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sass-bootstrap": "~3.0.2"
+  }
+}

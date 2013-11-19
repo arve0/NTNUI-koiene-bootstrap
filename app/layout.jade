@@ -1,0 +1,71 @@
+!!! 5
+html
+head
+    link(rel='stylesheet', href='css/stil.css')
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    style(type='text/css')
+      .gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
+    link(type='text/css', rel='stylesheet', href='./NTNUI Koiene_files/css')
+    style(type='text/css')
+      @media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}
+    style(type='text/css')
+      .gm-style div,.gm-style span,.gm-style label,.gm-style a{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400}.gm-style div,.gm-style span,.gm-style label{text-decoration:none}.gm-style img{border:0;padding:0;margin:0}
+    meta(name='robots', content='index, follow')
+    meta(http-equiv='content-style-type', content='text/css')
+    title NTNUI Koiene
+    link(rel='stylesheet', type='text/css', href='./NTNUI Koiene_files/style.css')
+    //
+       Piwik 
+    script(type='text/javascript', style='')
+      var pkBaseURL = (("https:" == document.location.protocol) ? "https://org.ntnu.no/koiene/piwik/" : "http://org.ntnu.no/koiene/piwik/");
+      document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    script(src='./NTNUI Koiene_files/piwik.js', type='text/javascript')
+    script(type='text/javascript')
+      try {
+      var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+      piwikTracker.trackPageView();
+      piwikTracker.enableLinkTracking();
+      } catch( err ) {}
+    noscript
+      | <p><img src="http://org.ntnu.no/koiene/piwik/piwik.php?idsite=1" border="0" alt=""></p>
+    //
+       End Piwik Tracking Code 
+    script(type='text/javascript', src='./NTNUI Koiene_files/js')
+    script(src='./NTNUI Koiene_files/main.js', type='text/javascript')
+    script(type='text/javascript')
+      function StatkartMapType() {
+      this.tileSize = new google.maps.Size(256,256);
+      this.maxZoom = 19;
+      this.getTile = function(coord, zoom, ownerDocument) {
+      var div = ownerDocument.createElement('DIV');
+      div.style.width = this.tileSize.width + 'px';
+      div.style.height = this.tileSize.height + 'px';
+      div.style.backgroundImage = "url(http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom=" + zoom + "&x=" + coord.x + "&y=" + coord.y + ")";
+      return div;
+      };
+      }
+      function initialize() {
+      var mapOptions = {
+      zoom: 14,
+      center: new google.maps.LatLng(63.08642,11.64870),
+      mapTypeId: google.maps.MapTypeId.TERRAIN,
+      zoomControl: true,
+      zoomControlOptions: {style: google.maps.ZoomControlStyle.SMALL},
+      disableDefaultUI: false,
+      scrollwheel: false,
+      scaleControl: true,
+      panControl: false,
+      mapTypeControl: false,
+      streetViewControl: false
+      };
+      var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+      var kmlLayer = new google.maps.KmlLayer("http://org.ntnu.no/koiene/koiene/maps/koiene.kml",{suppressInfoWindows: false, map: map, preserveViewport: true});
+      kmlLayer.setMap(map);
+      map.mapTypes.set('topo2',new StatkartMapType());
+      map.setMapTypeId('topo2');
+      }
+    script(type='text/javascript', charset='UTF-8', src='./NTNUI Koiene_files/{common,map,util,onion,kml}.js')
+    script(type='text/javascript', charset='UTF-8', src='./NTNUI Koiene_files/{stats,controls}.js')
+    script(type='text/javascript', charset='UTF-8', src='./NTNUI Koiene_files/{infowindow}.js')
+  body(onload='initialize()', onunload='GUnload()')
+  block body

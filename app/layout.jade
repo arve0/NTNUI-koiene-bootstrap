@@ -1,26 +1,26 @@
 !!! 5
 html
-head
-    link(rel='stylesheet', href='css/stil.css')
+  head
     meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
-    style(type='text/css')
-      .gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
-    link(type='text/css', rel='stylesheet', href='./NTNUI Koiene_files/css')
-    style(type='text/css')
-      @media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}
-    style(type='text/css')
-      .gm-style div,.gm-style span,.gm-style label,.gm-style a{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400}.gm-style div,.gm-style span,.gm-style label{text-decoration:none}.gm-style img{border:0;padding:0;margin:0}
+    //- skaler til mobile enheter
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
     meta(name='robots', content='index, follow')
     meta(http-equiv='content-style-type', content='text/css')
+    //- stilark
+    link(rel='stylesheet', href='css/stil.css')
+    link(rel='stylesheet', href='./NTNUI Koiene_files/css')
+    link(rel='stylesheet', href='./NTNUI Koiene_files/style.css')
+    style(type='text/css').
+      .gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
+      @media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}
+      .gm-style div,.gm-style span,.gm-style label,.gm-style a{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400}.gm-style div,.gm-style span,.gm-style label{text-decoration:none}.gm-style img{border:0;padding:0;margin:0}
     title NTNUI Koiene
-    link(rel='stylesheet', type='text/css', href='./NTNUI Koiene_files/style.css')
-    //
-       Piwik 
-    script(type='text/javascript', style='')
+    // Piwik 
+    script(type='text/javascript', style='').
       var pkBaseURL = (("https:" == document.location.protocol) ? "https://org.ntnu.no/koiene/piwik/" : "http://org.ntnu.no/koiene/piwik/");
       document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
     script(src='./NTNUI Koiene_files/piwik.js', type='text/javascript')
-    script(type='text/javascript')
+    script(type='text/javascript').
       try {
       var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
       piwikTracker.trackPageView();
@@ -28,11 +28,10 @@ head
       } catch( err ) {}
     noscript
       | <p><img src="http://org.ntnu.no/koiene/piwik/piwik.php?idsite=1" border="0" alt=""></p>
-    //
-       End Piwik Tracking Code 
+    // End Piwik Tracking Code 
     script(type='text/javascript', src='./NTNUI Koiene_files/js')
     script(src='./NTNUI Koiene_files/main.js', type='text/javascript')
-    script(type='text/javascript')
+    script(type='text/javascript').
       function StatkartMapType() {
       this.tileSize = new google.maps.Size(256,256);
       this.maxZoom = 19;
@@ -67,5 +66,92 @@ head
     script(type='text/javascript', charset='UTF-8', src='./NTNUI Koiene_files/{common,map,util,onion,kml}.js')
     script(type='text/javascript', charset='UTF-8', src='./NTNUI Koiene_files/{stats,controls}.js')
     script(type='text/javascript', charset='UTF-8', src='./NTNUI Koiene_files/{infowindow}.js')
+    script(type='text/javascript', src='bower_components/jquery/jquery.min.js')
+    script.
+      var setMenuHeight = function(){
+        var meny = $('.meny');
+        if($(window).width() > 767) {
+          meny.height($('.innhold').height());
+        }
+        else {
+          meny.height('auto');
+        }
+      }
+      var setLogoHeight = function(){
+        var h = $('.top-img').height();
+        $('.logo').height(h);
+      }
+      $(document).ready(function(){
+        setInterval(setLogoHeight);
+        setMenuHeight();
+        $(window).resize(function(){
+          setMenuHeight();
+        });
+      });
   body(onload='initialize()', onunload='GUnload()')
-  block body
+    .container
+      .row
+        // Logo venstre topp
+        .logo
+          a(href='http://org.ntnu.no/koiene/index.php')
+            img(src='./NTNUI Koiene_files/koiene_logo.gif')
+            b NTNUI Koiene
+        // Toppbilde
+        .top-img
+          img.img-responsive(src='./NTNUI Koiene_files/bildermiks.jpg')
+      .row
+        // Navigasjonslinje topp
+        .navigation
+          | ../
+          a(href='http://org.ntnu.no/koiene/index.php') hovedside
+          | /Koiene/Holmsåkoia
+      .row
+        // Meny venstre
+        .meny
+          a.over(href='http://org.ntnu.no/koiene/omkoiene.php') Om koiegruppa
+          a.under(href='http://org.ntnu.no/koiene/turprogram.php') Turprogram
+          a.under(href='http://org.ntnu.no/koiene/veddugnad.php') Veddugnad
+          a.under(href='http://org.ntnu.no/koiene/epostliste.php') Epostliste
+          a.under(href='http://org.ntnu.no/koiene/oldschool.php') Old School
+          a.under(href='http://org.ntnu.no/koiene/kontakt.php') Kontakt oss!
+          a.over(href='http://org.ntnu.no/koiene/koiene/index.php') Koiene
+          a.under(href='http://org.ntnu.no/koiene/oversiktskart.php') Oversiktskart
+          a.under(href='http://org.ntnu.no/koiene/koiematrisa.php') Koiematrisa
+          a.under(href='http://org.ntnu.no/koiene/koietilkoie.php') Koie til Koie
+          a.under(href='http://org.ntnu.no/koiene/tips.php') Tips & Tricks
+          a.under(href='http://org.ntnu.no/koiene/jaktfiske.php') Jakt & Fiske
+          a.over(href='http://org.ntnu.no/koiene/koiebruk.php') Hvordan leie?
+          a.under(href='http://org.ntnu.no/koiene/ledigekoier.php') Ledige koier
+          a.under(href='http://org.ntnu.no/koieneres/alle/onsdagsko.php') Popularitet
+          a.under(href='http://org.ntnu.no/koieneres/alle/statistikk.php') Statistikk
+          a.under(href='http://org.ntnu.no/koiene/ekoieboka/index.php') Digital koiebok
+          a.under(href='http://org.ntnu.no/koiene/termsofuse.php') Terms of use
+          a.over(href='http://org.ntnu.no/koiene/faq.php') FAQ
+          a.over(href='https://picasaweb.google.com/112172516519597975801', target='_blank') Turbilder
+          .spraklink
+            a(href='http://org.ntnu.no/koiene/engelsk.php')
+              img(src='./NTNUI Koiene_files/engelsk.gif', width='27', height='18', border='0', alt='engelsk')
+            a(href='http://org.ntnu.no/koiene/fransk.php')
+              img(src='./NTNUI Koiene_files/fransk.gif', width='27', height='18', border='0', alt='fransk')
+            a(href='http://org.ntnu.no/koiene/tysk.php')
+              img(src='./NTNUI Koiene_files/tysk.gif', width='27', height='18', border='0', alt='tysk')
+          .face
+            table(cellpadding='0', cellspacing='0', border='0')
+              tbody
+                tr
+                  td(bgcolor='#E6E6E6', width='42', align='right', valign='middle')
+                    a(href='http://www.facebook.com/pages/NTNUI-Koiene/349959341712320', target='_blank')
+                      img(src='./NTNUI Koiene_files/facebook.gif', border='0', alt='')
+                  td(bgcolor='#E6E6E6', valign='top')
+                    a(href='http://www.facebook.com/pages/NTNUI-Koiene/349959341712320', target='_blank')
+                      font(size='-2')  Følg oss på
+                      br
+                      | Facebook
+          hr
+          p(align='center')
+            a(href='http://www.ntnui.no/', target='_blank')
+              img(src='./NTNUI Koiene_files/ntnui_2_5x1.gif', border='0', alt='http://www.ntnui.no')
+          p(align='center')
+            a(href='http://www.studenterhytta.org/', target='_blank')
+              img(src='./NTNUI Koiene_files/hyttalogo.jpg', border='0', alt='http://www.studenterhytta.org')
+        block innhold

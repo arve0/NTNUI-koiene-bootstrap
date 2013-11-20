@@ -281,7 +281,7 @@ a {
 img {
   vertical-align: middle; }
 
-.img-responsive, .koie-bilde-stor img, .koie-bilder-liten img {
+.img-responsive, .koie-bilde-stor img, .koie-bilde-liten img {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -373,7 +373,7 @@ cite {
 .text-right {
   text-align: right; }
 
-.text-center, .logo, .spraklink {
+.text-center, .logo, .spraklink, .vaerdag {
   text-align: center; }
 
 h1, h2, h3, h4, h5, h6,
@@ -526,24 +526,36 @@ blockquote {
     color: #999999; }
     blockquote small:before {
       content: '\2014 \00A0'; }
-  blockquote.pull-right, blockquote.engelsk {
+  blockquote.pull-right, blockquote.engelsk, blockquote.kilde-yr, blockquote.kart, .kart blockquote.kilde {
     padding-right: 15px;
     padding-left: 0;
     border-right: 5px solid #eeeeee;
     border-left: 0; }
-    blockquote.pull-right p, blockquote.engelsk p,
+    blockquote.pull-right p, blockquote.engelsk p, blockquote.kilde-yr p, blockquote.kart p, .kart blockquote.kilde p,
     blockquote.pull-right small,
     blockquote.engelsk small,
+    blockquote.kilde-yr small,
+    blockquote.kart small,
+    .kart blockquote.kilde small,
     blockquote.pull-right .small,
-    blockquote.engelsk .small {
+    blockquote.engelsk .small,
+    blockquote.kilde-yr .small,
+    blockquote.kart .small,
+    .kart blockquote.kilde .small {
       text-align: right; }
-    blockquote.pull-right small:before, blockquote.engelsk small:before,
+    blockquote.pull-right small:before, blockquote.engelsk small:before, blockquote.kilde-yr small:before, blockquote.kart small:before, .kart blockquote.kilde small:before,
     blockquote.pull-right .small:before,
-    blockquote.engelsk .small:before {
+    blockquote.engelsk .small:before,
+    blockquote.kilde-yr .small:before,
+    blockquote.kart .small:before,
+    .kart blockquote.kilde .small:before {
       content: ''; }
-    blockquote.pull-right small:after, blockquote.engelsk small:after,
+    blockquote.pull-right small:after, blockquote.engelsk small:after, blockquote.kilde-yr small:after, blockquote.kart small:after, .kart blockquote.kilde small:after,
     blockquote.pull-right .small:after,
-    blockquote.engelsk .small:after {
+    blockquote.engelsk .small:after,
+    blockquote.kilde-yr .small:after,
+    blockquote.kart .small:after,
+    .kart blockquote.kilde .small:after {
       content: '\00A0 \2014'; }
 
 blockquote:before,
@@ -606,24 +618,24 @@ pre {
   .container:after {
     clear: both; }
 
-.row, .kort-info, .koie-info {
+.row, .kort-info, .koie-info, .vaeret, .koiebeskrivelse {
   margin-left: -15px;
   margin-right: -15px; }
-  .row:before, .kort-info:before, .koie-info:before, .row:after, .kort-info:after, .koie-info:after {
+  .row:before, .kort-info:before, .koie-info:before, .vaeret:before, .koiebeskrivelse:before, .row:after, .kort-info:after, .koie-info:after, .vaeret:after, .koiebeskrivelse:after {
     content: " ";
     /* 1 */
     display: table;
     /* 2 */ }
-  .row:after, .kort-info:after, .koie-info:after {
+  .row:after, .kort-info:after, .koie-info:after, .vaeret:after, .koiebeskrivelse:after {
     clear: both; }
 
-.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .top-img, .navigation, .innhold, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .koie-bilde-stor, .col-md-6, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .koie-detaljer, .col-md-4, .col-lg-4, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-2, .col-sm-2, .logo, .meny, .koie-bilder-liten, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
+.col-xs-12, .kart, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .top-img, .navigation, .innhold, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .kart, .col-lg-7, .col-xs-6, .col-sm-6, .koie-bilde-stor, .koie-detaljer, .col-md-6, .koie-bilde-stor, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, .koie-detaljer, .col-lg-4, .col-xs-3, .vaerdag, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-2, .col-sm-2, .logo, .meny, .koie-bilde-liten, .col-md-2, .koie-bilde-liten, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-12, .col-xs-11, .col-xs-10, .col-xs-9, .col-xs-8, .col-xs-7, .col-xs-6, .col-xs-5, .col-xs-4, .col-xs-3, .col-xs-2, .col-xs-1 {
+.col-xs-12, .kart, .col-xs-11, .col-xs-10, .col-xs-9, .col-xs-8, .col-xs-7, .col-xs-6, .col-xs-5, .col-xs-4, .col-xs-3, .vaerdag, .col-xs-2, .col-xs-1 {
   float: left; }
 
 .col-xs-1 {
@@ -632,7 +644,7 @@ pre {
 .col-xs-2 {
   width: 16.66667%; }
 
-.col-xs-3 {
+.col-xs-3, .vaerdag {
   width: 25%; }
 
 .col-xs-4 {
@@ -659,7 +671,7 @@ pre {
 .col-xs-11 {
   width: 91.66667%; }
 
-.col-xs-12 {
+.col-xs-12, .kart {
   width: 100%; }
 
 .col-xs-pull-0 {
@@ -783,25 +795,25 @@ pre {
   .container {
     width: 750px; }
 
-  .col-sm-12, .col-sm-11, .col-sm-10, .top-img, .navigation, .innhold, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .koie-bilde-stor, .col-sm-5, .col-sm-4, .koie-detaljer, .col-sm-3, .col-sm-2, .logo, .meny, .koie-bilder-liten, .col-sm-1 {
+  .col-sm-12, .col-sm-11, .col-sm-10, .top-img, .navigation, .innhold, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .koie-bilde-stor, .koie-detaljer, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .logo, .meny, .koie-bilde-liten, .col-sm-1 {
     float: left; }
 
   .col-sm-1 {
     width: 8.33333%; }
 
-  .col-sm-2, .logo, .meny, .koie-bilder-liten {
+  .col-sm-2, .logo, .meny, .koie-bilde-liten {
     width: 16.66667%; }
 
   .col-sm-3 {
     width: 25%; }
 
-  .col-sm-4, .koie-detaljer {
+  .col-sm-4 {
     width: 33.33333%; }
 
   .col-sm-5 {
     width: 41.66667%; }
 
-  .col-sm-6, .koie-bilde-stor {
+  .col-sm-6, .koie-bilde-stor, .koie-detaljer {
     width: 50%; }
 
   .col-sm-7 {
@@ -840,7 +852,7 @@ pre {
   .col-sm-pull-5 {
     right: 41.66667%; }
 
-  .col-sm-pull-6 {
+  .col-sm-pull-6, .koie-bilde-stor {
     right: 50%; }
 
   .col-sm-pull-7 {
@@ -879,7 +891,7 @@ pre {
   .col-sm-push-5 {
     left: 41.66667%; }
 
-  .col-sm-push-6 {
+  .col-sm-push-6, .koie-detaljer {
     left: 50%; }
 
   .col-sm-push-7 {
@@ -942,28 +954,28 @@ pre {
   .container {
     width: 970px; }
 
-  .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1 {
+  .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .kart, .col-md-6, .koie-bilde-stor, .col-md-5, .col-md-4, .koie-detaljer, .col-md-3, .col-md-2, .koie-bilde-liten, .col-md-1 {
     float: left; }
 
   .col-md-1 {
     width: 8.33333%; }
 
-  .col-md-2 {
+  .col-md-2, .koie-bilde-liten {
     width: 16.66667%; }
 
   .col-md-3 {
     width: 25%; }
 
-  .col-md-4 {
+  .col-md-4, .koie-detaljer {
     width: 33.33333%; }
 
   .col-md-5 {
     width: 41.66667%; }
 
-  .col-md-6 {
+  .col-md-6, .koie-bilde-stor {
     width: 50%; }
 
-  .col-md-7 {
+  .col-md-7, .kart {
     width: 58.33333%; }
 
   .col-md-8 {
@@ -993,7 +1005,7 @@ pre {
   .col-md-pull-3 {
     right: 25%; }
 
-  .col-md-pull-4 {
+  .col-md-pull-4, .koie-bilde-stor, .koie-bilde-liten {
     right: 33.33333%; }
 
   .col-md-pull-5 {
@@ -1044,7 +1056,7 @@ pre {
   .col-md-push-7 {
     left: 58.33333%; }
 
-  .col-md-push-8 {
+  .col-md-push-8, .koie-detaljer {
     left: 66.66667%; }
 
   .col-md-push-9 {
@@ -1390,7 +1402,7 @@ table th[class*="col-"] {
   background-color: #faf2cc; }
 
 @media (max-width: 767px) {
-  .table-responsive {
+  .table-responsive, .utdrag-koiematrise {
     width: 100%;
     margin-bottom: 15px;
     overflow-y: hidden;
@@ -1398,35 +1410,53 @@ table th[class*="col-"] {
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #dddddd;
     -webkit-overflow-scrolling: touch; }
-    .table-responsive > .table {
+    .table-responsive > .table, .utdrag-koiematrise > .table {
       margin-bottom: 0; }
-      .table-responsive > .table > thead > tr > th,
+      .table-responsive > .table > thead > tr > th, .utdrag-koiematrise > .table > thead > tr > th,
       .table-responsive > .table > thead > tr > td,
+      .utdrag-koiematrise > .table > thead > tr > td,
       .table-responsive > .table > tbody > tr > th,
+      .utdrag-koiematrise > .table > tbody > tr > th,
       .table-responsive > .table > tbody > tr > td,
+      .utdrag-koiematrise > .table > tbody > tr > td,
       .table-responsive > .table > tfoot > tr > th,
-      .table-responsive > .table > tfoot > tr > td {
+      .utdrag-koiematrise > .table > tfoot > tr > th,
+      .table-responsive > .table > tfoot > tr > td,
+      .utdrag-koiematrise > .table > tfoot > tr > td {
         white-space: nowrap; }
-    .table-responsive > .table-bordered {
+    .table-responsive > .table-bordered, .utdrag-koiematrise > .table-bordered {
       border: 0; }
-      .table-responsive > .table-bordered > thead > tr > th:first-child,
+      .table-responsive > .table-bordered > thead > tr > th:first-child, .utdrag-koiematrise > .table-bordered > thead > tr > th:first-child,
       .table-responsive > .table-bordered > thead > tr > td:first-child,
+      .utdrag-koiematrise > .table-bordered > thead > tr > td:first-child,
       .table-responsive > .table-bordered > tbody > tr > th:first-child,
+      .utdrag-koiematrise > .table-bordered > tbody > tr > th:first-child,
       .table-responsive > .table-bordered > tbody > tr > td:first-child,
+      .utdrag-koiematrise > .table-bordered > tbody > tr > td:first-child,
       .table-responsive > .table-bordered > tfoot > tr > th:first-child,
-      .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+      .utdrag-koiematrise > .table-bordered > tfoot > tr > th:first-child,
+      .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+      .utdrag-koiematrise > .table-bordered > tfoot > tr > td:first-child {
         border-left: 0; }
-      .table-responsive > .table-bordered > thead > tr > th:last-child,
+      .table-responsive > .table-bordered > thead > tr > th:last-child, .utdrag-koiematrise > .table-bordered > thead > tr > th:last-child,
       .table-responsive > .table-bordered > thead > tr > td:last-child,
+      .utdrag-koiematrise > .table-bordered > thead > tr > td:last-child,
       .table-responsive > .table-bordered > tbody > tr > th:last-child,
+      .utdrag-koiematrise > .table-bordered > tbody > tr > th:last-child,
       .table-responsive > .table-bordered > tbody > tr > td:last-child,
+      .utdrag-koiematrise > .table-bordered > tbody > tr > td:last-child,
       .table-responsive > .table-bordered > tfoot > tr > th:last-child,
-      .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+      .utdrag-koiematrise > .table-bordered > tfoot > tr > th:last-child,
+      .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+      .utdrag-koiematrise > .table-bordered > tfoot > tr > td:last-child {
         border-right: 0; }
-      .table-responsive > .table-bordered > tbody > tr:last-child > th,
+      .table-responsive > .table-bordered > tbody > tr:last-child > th, .utdrag-koiematrise > .table-bordered > tbody > tr:last-child > th,
       .table-responsive > .table-bordered > tbody > tr:last-child > td,
+      .utdrag-koiematrise > .table-bordered > tbody > tr:last-child > td,
       .table-responsive > .table-bordered > tfoot > tr:last-child > th,
-      .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+      .utdrag-koiematrise > .table-bordered > tfoot > tr:last-child > th,
+      .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+      .utdrag-koiematrise > .table-bordered > tfoot > tr:last-child > td {
         border-bottom: 0; } }
 fieldset {
   padding: 0;
@@ -2619,7 +2649,7 @@ input[type="button"].btn-block {
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
-  .dropdown-menu.pull-right, .dropdown-menu.engelsk {
+  .dropdown-menu.pull-right, .dropdown-menu.engelsk, .dropdown-menu.kilde-yr, .dropdown-menu.kart, .kart .dropdown-menu.kilde {
     right: 0;
     left: auto; }
   .dropdown-menu .divider {
@@ -2677,7 +2707,7 @@ input[type="button"].btn-block {
   top: 0;
   z-index: 990; }
 
-.pull-right > .dropdown-menu, .engelsk > .dropdown-menu {
+.pull-right > .dropdown-menu, .engelsk > .dropdown-menu, .kilde-yr > .dropdown-menu, .kart > .dropdown-menu, .kart .kilde > .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -3297,9 +3327,12 @@ input[type="button"].btn-block {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.navbar-nav.pull-right > li > .dropdown-menu, .navbar-nav.engelsk > li > .dropdown-menu,
+.navbar-nav.pull-right > li > .dropdown-menu, .navbar-nav.engelsk > li > .dropdown-menu, .navbar-nav.kilde-yr > li > .dropdown-menu, .navbar-nav.kart > li > .dropdown-menu, .kart .navbar-nav.kilde > li > .dropdown-menu,
 .navbar-nav > li > .dropdown-menu.pull-right,
-.navbar-nav > li > .dropdown-menu.engelsk {
+.navbar-nav > li > .dropdown-menu.engelsk,
+.navbar-nav > li > .dropdown-menu.kilde-yr,
+.navbar-nav > li > .dropdown-menu.kart,
+.kart .navbar-nav > li > .dropdown-menu.kilde {
   left: auto;
   right: 0; }
 
@@ -3865,7 +3898,7 @@ a.thumbnail.active {
 
 .media > .pull-left, .media > .vanskelighetsgrad, .media > .vanskelighetsgrad-bilde {
   margin-right: 10px; }
-.media > .pull-right, .media > .engelsk {
+.media > .pull-right, .media > .engelsk, .media > .kilde-yr, .media > .kart, .kart .media > .kilde {
   margin-left: 10px; }
 
 .media-list {
@@ -3952,13 +3985,16 @@ a.list-group-item {
   border-top-width: 0; }
 
 .panel > .table,
-.panel > .table-responsive {
+.panel > .table-responsive,
+.panel > .utdrag-koiematrise {
   margin-bottom: 0; }
 .panel > .panel-body + .table,
-.panel > .panel-body + .table-responsive {
+.panel > .panel-body + .table-responsive,
+.panel > .panel-body + .utdrag-koiematrise {
   border-top: 1px solid #dddddd; }
 .panel > .table-bordered,
-.panel > .table-responsive > .table-bordered {
+.panel > .table-responsive > .table-bordered,
+.panel > .utdrag-koiematrise > .table-bordered {
   border: 0; }
   .panel > .table-bordered > thead > tr > th:first-child,
   .panel > .table-bordered > thead > tr > td:first-child,
@@ -3967,11 +4003,17 @@ a.list-group-item {
   .panel > .table-bordered > tfoot > tr > th:first-child,
   .panel > .table-bordered > tfoot > tr > td:first-child,
   .panel > .table-responsive > .table-bordered > thead > tr > th:first-child,
+  .panel > .utdrag-koiematrise > .table-bordered > thead > tr > th:first-child,
   .panel > .table-responsive > .table-bordered > thead > tr > td:first-child,
+  .panel > .utdrag-koiematrise > .table-bordered > thead > tr > td:first-child,
   .panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,
+  .panel > .utdrag-koiematrise > .table-bordered > tbody > tr > th:first-child,
   .panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,
+  .panel > .utdrag-koiematrise > .table-bordered > tbody > tr > td:first-child,
   .panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
-  .panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+  .panel > .utdrag-koiematrise > .table-bordered > tfoot > tr > th:first-child,
+  .panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+  .panel > .utdrag-koiematrise > .table-bordered > tfoot > tr > td:first-child {
     border-left: 0; }
   .panel > .table-bordered > thead > tr > th:last-child,
   .panel > .table-bordered > thead > tr > td:last-child,
@@ -3980,11 +4022,17 @@ a.list-group-item {
   .panel > .table-bordered > tfoot > tr > th:last-child,
   .panel > .table-bordered > tfoot > tr > td:last-child,
   .panel > .table-responsive > .table-bordered > thead > tr > th:last-child,
+  .panel > .utdrag-koiematrise > .table-bordered > thead > tr > th:last-child,
   .panel > .table-responsive > .table-bordered > thead > tr > td:last-child,
+  .panel > .utdrag-koiematrise > .table-bordered > thead > tr > td:last-child,
   .panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,
+  .panel > .utdrag-koiematrise > .table-bordered > tbody > tr > th:last-child,
   .panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,
+  .panel > .utdrag-koiematrise > .table-bordered > tbody > tr > td:last-child,
   .panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
-  .panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+  .panel > .utdrag-koiematrise > .table-bordered > tfoot > tr > th:last-child,
+  .panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+  .panel > .utdrag-koiematrise > .table-bordered > tfoot > tr > td:last-child {
     border-right: 0; }
   .panel > .table-bordered > thead > tr:last-child > th, .panel > .table-bordered > thead > tr:last-child > td,
   .panel > .table-bordered > tbody > tr:last-child > th,
@@ -3992,11 +4040,17 @@ a.list-group-item {
   .panel > .table-bordered > tfoot > tr:last-child > th,
   .panel > .table-bordered > tfoot > tr:last-child > td,
   .panel > .table-responsive > .table-bordered > thead > tr:last-child > th,
+  .panel > .utdrag-koiematrise > .table-bordered > thead > tr:last-child > th,
   .panel > .table-responsive > .table-bordered > thead > tr:last-child > td,
+  .panel > .utdrag-koiematrise > .table-bordered > thead > tr:last-child > td,
   .panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,
+  .panel > .utdrag-koiematrise > .table-bordered > tbody > tr:last-child > th,
   .panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,
+  .panel > .utdrag-koiematrise > .table-bordered > tbody > tr:last-child > td,
   .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th,
-  .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+  .panel > .utdrag-koiematrise > .table-bordered > tfoot > tr:last-child > th,
+  .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+  .panel > .utdrag-koiematrise > .table-bordered > tfoot > tr:last-child > td {
     border-bottom: 0; }
 
 .panel-heading {
@@ -4628,7 +4682,7 @@ button.close {
   margin-left: auto;
   margin-right: auto; }
 
-.pull-right, .engelsk {
+.pull-right, .engelsk, .kilde-yr, .kart, .kart .kilde {
   float: right !important; }
 
 .pull-left, .vanskelighetsgrad, .vanskelighetsgrad-bilde {
@@ -5054,7 +5108,7 @@ hr {
 
 .koie-info {
   clear: both;
-  margin: 15px;
+  margin: 15px 0;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #e6e6e6;
@@ -5064,6 +5118,72 @@ hr {
   .koie-info li {
     list-style-type: none; }
 
-.koie-bilder-liten img {
-  clear: right;
-  padding-bottom: 10px; }
+@media all and (max-width: 992px) {
+  .koie-bilde-stor {
+    padding-right: 15px; } }
+
+@media all and (max-width: 991px) and (min-width: 768px) {
+  .koie-bilde-liten {
+    padding: 15px 10px 0 10px; }
+
+  .koie-bilde-liten:first-child {
+    padding-left: 15px;
+    padding-right: 5px; }
+
+  .koie-bilde-liten:last-child {
+    padding-left: 5px;
+    padding-right: 15px; } }
+@media all and (min-width: 992px) {
+  .koie-bilde-liten {
+    padding-left: 0; }
+
+  .koie-bilde-liten:nth-child(2) {
+    padding-top: 5px;
+    padding-bottom: 5px; } }
+.koie-detaljer {
+  padding-left: 0; }
+  @media all and (max-width: 767px) {
+    .koie-detaljer {
+      padding-left: 15px; } }
+  .koie-detaljer ul {
+    padding-left: 0; }
+  .koie-detaljer li {
+    padding-bottom: 5px; }
+
+.kilde-yr {
+  padding-right: 15px; }
+
+.vaeret {
+  margin: 0;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 10px; }
+
+.vaerdag h6 {
+  font-weight: bold; }
+.vaerdag b {
+  color: #3366FF;
+  padding-left: 8px;
+  white-space: nowrap; }
+
+.koiebeskrivelse {
+  margin: 15px 0; }
+
+.kart {
+  padding: 0;
+  margin-left: 15px;
+  margin-bottom: 10px; }
+
+#map_canvas {
+  width: 100%;
+  height: 350px;
+  border: 1px solid black;
+  background-color: #e5e3df;
+  overflow: hidden;
+  -webkit-transform: translateZ(0); }
+
+.beskrivelse {
+  text-align: justify; }
+
+.utdrag-koiematrise {
+  border: 2px #00A000 solid; }

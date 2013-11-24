@@ -1,14 +1,33 @@
 @import "../bower_components/sass-bootstrap/lib/bootstrap";
 
+body		{ background-color:#FFFFFF; font-family:verdana, arial; font-size:10pt; color:#000000; }
+table		{ background-color:#FFFFFF; font-family:verdana, arial; font-size:10pt; color:#000000; }
+a:link, a:visited, a:active {
+  // alle linker
+  text-decoration:none;
+  color:#00A000;
+}
+a.under:link, a.under-mobil:link, a.under-desktop:link,
+a.under:visited, a.under-mobil:visited, a.under-desktop:visited,
+a.under:active, a.under-mobil:active, a.under-desktop:active {
+  // svart underlink på meny
+  color:#000000;
+}
+a:hover {
+  color:#00FF00;
+}
+
 .container {
   max-width:950px;
 }
 .logo {
   @extend .col-sm-2;
   @extend .text-center;
+  @extend .hidden-xs;
   background-color: #E6E6E6;
   a:visited, a:link {
     color:#000;
+    display:block;
   }
 }
 .top-img {
@@ -23,43 +42,118 @@
 }
 .meny {
   @extend .col-sm-2;
+  @extend .clearfix; // for høyde til div, ettersom face er floating
   background-color:#E6E6E6;
   padding-bottom:30px;
 }
 .container {
-  padding-top:20px;
+  // rom for topp på dekstop
+  @media all and (min-width: $screen-sm-min) {
+    padding-top:20px;
+  }
 }
-.over, .under {
+.over, .under, .over-desktop, .under-desktop, .over-mobil, .under-mobil {
   // link på egen linje
   float:left;
   clear:both;
   // stil
   font-weight:bold;
+  @media all and (max-width: $screen-xs-max){
+    // større font mobil -> letter å treffe/trykke
+    font-size:15px;
+  }
 }
-.over, .language, .face {
+.over, .language, .over-mobil, .over-desktop {
   // rom over kategorier
-  padding-top:10px;
+  margin-top:10px;
 }
 .under {
   font-size:10px;
   padding-left:10px;
+  @media all and (max-width: $screen-xs-max){
+    // større font mobil -> letter å treffe/trykke
+    font-size:14px;
+  }
+}
+.under-desktop {
+  // bytt rekkefølge på meny for mobil
+  font-size:10px;
+  padding-left:10px;
+}
+.under-mobil {
+  // bytt rekkefølge på meny for mobil
+  display:none; // bare vis via javascript når hele menyen vises
+  font-size:14px;
+  padding-left:10px;
+}
+.vis-meny {
+  @extend .visible-xs;
+  @extend .btn;
+  @extend .btn-success;
+  @extend .pull-right;
 }
 .spraklink {
-  @extend .text-center;
+  @media all and (max-width: $screen-xs-max) {
+    // bare midtstill for desktop
+    text-align:left;
+  }
   clear:both;
+  padding-top:15px;
   a {
-    padding-left:5px;
+    padding-right:4px;
+  }
+}
+.facebook {
+  // link til facebook side i meny
+  margin:15px 0;
+  float:left;
+  a { display:block; }
+  a, img, p {
+    float:left;
+    padding-right:5px;
+    margin:0;
+  }
+  p {
+    @media all and (min-width: $screen-sm-min) {
+      // liten tekst for dekstop
+      font-size:10px;
+    }
+    @media all and (max-width: $screen-xs-max){
+      // vertical align text on mobile
+      height:25px;
+      padding-top:4px;
+    }
   }
 }
 hr {
   border-color:gray;
+  clear:both;
+}
+.eksterne-linker {
+  @extend .hidden-xs;
+  text-align:center;
+  a {
+    display:block; // make picture decide height
+    margin-bottom:15px;
+  }
 }
 .innhold {
   @extend .col-sm-10;
 }
+.tittel {
+  @extend .clearfix;
+  width:100%;
+  h2 {
+    @extend .pull-left;
+  }
+  .engelsk {
+    @extend .pull-right;
+    margin-top:30px;
+  }
+}
 .kort-info {
   @extend .row;
-  padding:0 30px;
+  padding:0 15px;
   clear:both;
 }
 .vanskelighetsgrad {
@@ -67,13 +161,11 @@ hr {
 }
 .vanskelighetsgrad-bilde {
   @extend .pull-left;
+  margin-right:10px;
   img {
     height:22px;
     width:22px;
   }
-}
-.engelsk {
-  @extend .pull-right;
 }
 .koie-info {
   @extend .row;
@@ -89,7 +181,7 @@ hr {
     list-style-type: none;
   }
 }
-.koie-bilde-stor {
+.koiebilde-stor {
   @extend .col-sm-6;
   @extend .col-sm-pull-6; // foran tekst (mobile first)
   @extend .col-md-6;
@@ -101,7 +193,7 @@ hr {
     @extend .img-responsive;
   }
 }
-.koie-bilde-liten {
+.koiebilde-liten {
   @extend .col-sm-2; // under stort bilde for small
   @extend .col-md-2;
   @extend .col-md-pull-4; // til høyre for stort bilde for medium
@@ -111,23 +203,23 @@ hr {
 }
 @media all and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
   // stil for småbilder i small
-  .koie-bilde-liten {
+  .koiebilde-liten {
     padding:15px 10px 0 10px;
   }
-  .koie-bilde-liten:first-child {
+  .koiebilde-liten:first-child {
     padding-left:15px;
     padding-right:5px;
   }
-  .koie-bilde-liten:last-child {
+  .koiebilde-liten:last-child {
     padding-left:5px;
     padding-right:15px;
   }
 }
 @media all and (min-width: $screen-md-min) {
-  .koie-bilde-liten {
+  .koiebilde-liten {
     padding-left:0;
   }
-  .koie-bilde-liten:nth-child(2) {
+  .koiebilde-liten:nth-child(2) {
     padding-top:5px;
     padding-bottom:5px;
   }
@@ -202,5 +294,12 @@ hr {
 }
 .utdrag-koiematrise {
   @extend .table-responsive;
-  border: 2px #00A000 solid;
+  border:2px #00A000 solid;
+  padding:2px;
+  th,td {
+    @extend .text-center;
+    border:solid 2px #fff;
+    padding:4px;
+    white-space:nowrap;
+  }
 }
